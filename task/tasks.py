@@ -22,3 +22,4 @@ def process_task(task_id):
         logger.error(f"Задача с id={task_id} не найдена")
     except Exception as e:
         logger.error(f"Ошибка при обработке задачи {task_id}: {e}")
+
