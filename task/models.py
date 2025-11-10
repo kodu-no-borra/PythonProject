@@ -19,7 +19,7 @@ class Task(models.Model):
     status = models.PositiveSmallIntegerField(
         verbose_name='Status',
         choices=TASK_STATUSES,
-        default=1,
+        default=TASK_STATUSES.PENDING,
         db_index=True,
         help_text='Статус задачи'
     )

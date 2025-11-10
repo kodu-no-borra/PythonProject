@@ -1,9 +1,10 @@
+from model_utils import Choices
 from django.utils.translation import gettext_lazy as _
 
-TASK_STATUSES = (
-    (0, _('Pending')),
-    (1, _('In Progress')),
-    (2, _('Completed')),
+TASK_STATUSES = Choices(
+    (0, 'PENDING', _('Pending')),
+    (1, 'IN_PROGRESS', _('In Progress')),
+    (2, 'COMPLETED', _('Completed')),
 )
 
 """
