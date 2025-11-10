@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "pythonproject"
+version = "0.1.0"
+description = ""
+authors = ["kodu-no-borra <d4wyd0ffden@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.2.8"
+dotenv = "^0.9.9"
+dj-database-url = "^3.0.1"
+djangorestframework = "^3.16.1"
+psycopg = "^3.2.12"
+psycopg-binary = "^3.2.12"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.14.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+output-format = "concise"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "C90", "I", "N", "UP"]
+ignore = ["E501"]
+fixable = ["ALL"]
