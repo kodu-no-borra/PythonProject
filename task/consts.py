@@ -5,3 +5,27 @@ TASK_STATUSES = (
     (1, _('In Progress')),
     (2, _('Completed')),
 )
+
+"""
+Тут бы я хотел реализовать Choises
+from model_utils import Choices
+
+
+TASK_STATUSES = Choices(
+        (0, 'PENDING', _('Pending')),
+        (1, 'IN_PROGRESS', _('In Progress')),
+        (2, 'COMPLETED', _('Completed')),
+    )
+    
+def get_task_statuses_choices():
+    return TASK_STATUSES
+Тогда в моделях можно будет обращаться так:
+Тогда в модельке можно было сделать мульти поле
+
+status = models.PositiveSmallIntegerField(
+        verbose_name=_('Status'),
+        choices=get_task_statuses_choices,
+        db_index=True
+    )
+
+"""

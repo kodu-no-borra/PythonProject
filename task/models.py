@@ -40,3 +40,25 @@ class Task(models.Model):
         ordering = ['-created_at']
 
 
+# class BasePDate(models.Model):
+#     created_at = models.DateTimeField(
+#         auto_now_add=True,
+#         verbose_name='Created At',
+#         help_text='Время создания задачи'
+#     )
+#     updated_at = models.DateTimeField(
+#         auto_now=True,
+#         verbose_name='Updated At',
+#         help_text='Время последнего обновления задачи'
+#     )
+#
+# class Task(BasePDate):
+#     <. . .>
+
+
+"""
+Здесь бы сделал базовую модель с полями created_at и updated_at как показано выше
+Но всвязи с ограниченым временем оставил так как есть
+Индексы тоже ставить не стал - тк нет необходимости для такой модели
+Хотя вот на статус можно поставить - но он будет меняться  достаточно часто, поэтому so-so решение
+"""
