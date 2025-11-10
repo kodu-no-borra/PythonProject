@@ -6,3 +6,9 @@ dev:
 
 celery:
 	poetry run celery -A __project__ worker --loglevel=info
+
+enter-web:
+	docker compose exec web sh
+test:
+	poetry run python manage.py test api
+
