@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   db:
     image: postgres:16-alpine
@@ -8,6 +10,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
+
   web:
     build: .
     container_name: dev_django
@@ -17,6 +20,25 @@ services:
     env_file: .env.compose
     depends_on:
       - db
+      - redis
+    volumes:
+      - .:/app
+
+
+  redis:
+    image: redis:7
+    container_name: dev_redis
+    ports:
+      - "6380:6379"
+
+  celery:
+    build: .
+    container_name: dev_celery
+    command: celery -A __project__ worker -l info
+    env_file: .env.compose
+    depends_on:
+      - db
+      - redis
     volumes:
       - .:/app
 

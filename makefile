@@ -3,3 +3,6 @@ web:
 
 dev:
 	poetry run ./manage.py runserver
+
+celery:
+	poetry run celery -A __project__ worker --loglevel=info

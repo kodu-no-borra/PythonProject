@@ -13,6 +13,8 @@ dj-database-url = "^3.0.1"
 djangorestframework = "^3.16.1"
 psycopg = "^3.2.12"
 psycopg-binary = "^3.2.12"
+celery = "^5.5.3"
+redis = "^7.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
