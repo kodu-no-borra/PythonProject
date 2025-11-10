@@ -1,5 +1,3 @@
-
-````markdown
 # API Эндпоинты PythonProject
 
 Проект на Django + DRF с задачами (`Task`). Все эндпоинты доступны по пути `/api/tasks/`.
